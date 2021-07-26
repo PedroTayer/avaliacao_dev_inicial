@@ -4,7 +4,7 @@ Não foi utilizado nenhuma biblioteca externa.
 
 Complexidade de tempo: O(nlogn), sendo n o número de garrafas.
 
-Essa complexidade pois utilizou-se heap como estrutura de dados.
+Essa complexidade de tempo foi alcançada pois utilizou-se heap como estrutura de dados.
 
 ## Formas de rodar
 ### Solicitar dados pelo prompt (rodar sem argumentos)
