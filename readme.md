@@ -27,6 +27,8 @@ printar: se passado, printar passo-a-passo
 ## Testes
 Foram desenvolvidos alguns testes no script tests.py.
 
+Os testes foram desenvolvidos sem a biblioteca pytest para manter o padrão de utilizar somente bibliotecas nativas.
+
 O teste 6 foi propositalmente feito para não passar, para testar o comportamento do script.
 
 ```
