@@ -2,10 +2,21 @@ import heapq
 
 
 def organizar_input_garrafas(garrafas):
+	'''
+
+	:param garrafas: lista com as garrafas (em float)
+	:return:
+	garrafas_dict: dicionário de garrafas no formato: {1: 4.0, 2: 8.9} {número da garrafa: capacidade}
+	heap_garrafas: heap com as garrafas: [-8.9, 4.0]
+	'''
+
+	# Início da heap
 	heap_garrafas = []
 
-	garrafas_dict = {ind: float(val) for ind, val in enumerate(garrafas, 1)}
+	# O(n)
+	garrafas_dict = {ind: val for ind, val in enumerate(garrafas, 1)}
 
+	# O(n)
 	for garrafa in range(1, len(garrafas_dict) + 1):
 		heapq.heappush(heap_garrafas, -garrafas_dict[garrafa])
 
@@ -13,6 +24,12 @@ def organizar_input_garrafas(garrafas):
 
 
 def lista_para_args(lista):
+	'''
+
+	:param lista: argumentos inputados pelo usuário no prompt
+	:return:
+	args: dicionário com argumentos no formato: {'galao':4.6, 'garrafas':'1,5,7', 'printar'=False}
+	'''
 	args = {}
 	args['printar'] = False
 	for i in lista:
@@ -30,6 +47,14 @@ def lista_para_args(lista):
 
 
 def verificar_argumentos(**kwargs):
+	'''
+
+	:param kwargs: argumentos no formato: {'galao':4.6, 'garrafas':'1,5,7', 'printar'=False}
+	:return:
+	flag: bool se o valor passado é aceitável
+	galao: capacidade do galão em float
+	garrafas: capacidade das garrafas (em float)
+	'''
 
 	if 'galao' not in kwargs:
 		print(f'Parâmetro "galao" precisa ser passado, exemplo:\n galao=4.6 garrafas=3.7,1,2')
